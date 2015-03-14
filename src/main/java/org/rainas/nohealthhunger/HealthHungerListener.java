@@ -8,22 +8,28 @@ import org.bukkit.event.entity.FoodLevelChangeEvent;
 
 public class HealthHungerListener implements Listener {
 	NoHealthHunger plugin;
-	
+
 	public HealthHungerListener(NoHealthHunger plugin) {
 		this.plugin = plugin;
 	}
-	
+
 	@EventHandler
 	public void onEntityDamage(EntityDamageEvent event) {
 		if (event.getEntity() instanceof Player) {
-			event.setCancelled(true);
+			Player player = (Player) event.getEntity();
+			if (player.hasPermission("NoHealthHunger.nohealth")) {	
+				event.setCancelled(true);
+			}
 		}
 	}
-	
+
 	@EventHandler
 	public void onFoodLevelChange(FoodLevelChangeEvent event) {
 		if (event.getEntity() instanceof Player) {
-			event.setCancelled(true);
+			Player player = (Player) event.getEntity();
+			if (player.hasPermission("NoHealthHunger.nohunger")) {
+				event.setCancelled(true);
+			}
 		}
 	}
 }
