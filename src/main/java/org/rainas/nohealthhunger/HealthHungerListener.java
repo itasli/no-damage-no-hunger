@@ -14,11 +14,11 @@ public class HealthHungerListener implements Listener {
 	
 	@EventHandler
 	public void onEntityDamage(EntityDamageEvent event) {
-		
+		event.setCancelled(true);
 	}
 	
 	@EventHandler
 	public void onFoodLevelChange(FoodLevelChangeEvent event) {
-		
+		event.setCancelled(true);
 	}
 }
