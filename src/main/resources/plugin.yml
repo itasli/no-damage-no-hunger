@@ -1,3 +1,10 @@
 name: NoHealthHunger
 main: org.rainas.nohealthhunger.NoHealthHunger
 version: 0.0.1
+permissions:
+  NoHealthHunger.nohealth:
+    description: Take no damage
+    default: op
+  NoHealthHunger.nohunger:
+    description: Never go hungry
+    default: op
