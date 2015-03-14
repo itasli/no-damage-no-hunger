@@ -23,7 +23,10 @@ public class HealthHungerListener implements Listener {
 			}
 			
 			if (event.getCause() == DamageCause.VOID) {
-				
+				if (plugin.doVoid && player.hasPermission("NoHealthHunger.escapevoid")) {
+					player.teleport(plugin.spawn);
+					player.sendMessage(plugin.voidMessage);
+				}
 			}
 		}
 	}

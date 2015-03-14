@@ -1,0 +1,20 @@
+# Teleport to spawn on entering the void
+escapevoid:
+  # Set to "true" to teleport all void-goers to spawn
+  # Note: To not allow some people to escape void, set this to "true"
+  # ... and set permission "NoHealthHunger.escapevoid: false" for those select people
+  teleport_out_of_void: true
+  
+  # Message sent to player when they are teleported out of the void
+  message: Oops! Don't fall in!
+
+# Spawn location
+# Players who are teleported out of the void are tp'd to this location
+spawn:
+  # World name: probable just "world", look at the world data folder's name for clues
+  world: world
+  
+  # Type "Double" x, y, and z coordinates - you can use decimal places
+  x: 0
+  y: 0
+  z: 0
