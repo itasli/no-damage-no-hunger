@@ -13,6 +13,7 @@ public class NoHealthHunger extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		getLogger().info("Plugin enabled");
+		this.saveDefaultConfig();
 		Bukkit.getServer().getPluginManager().registerEvents(new HealthHungerListener(this), this);
 	}
 

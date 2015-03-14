@@ -8,3 +8,6 @@ permissions:
   NoHealthHunger.nohunger:
     description: Never go hungry
     default: op
+  NoHealthHunger.escapevoid:
+    description: Teleport to spawn on entering the void
+    default: true
