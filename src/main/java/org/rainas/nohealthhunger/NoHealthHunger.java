@@ -1,5 +1,6 @@
 package org.rainas.nohealthhunger;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class NoHealthHunger extends JavaPlugin {
@@ -12,6 +13,7 @@ public class NoHealthHunger extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		getLogger().info("Plugin enabled");
+		Bukkit.getServer().getPluginManager().registerEvents(new HealthHungerListener(this), this);
 	}
 
 }
