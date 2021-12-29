@@ -1,13 +1,14 @@
-name: NoHealthHunger
-main: org.rainas.nohealthhunger.NoHealthHunger
-version: 0.0.1
+main: io.github.itasli.nodamagenohunger.NoDamageNoHunger
+name: NoDamageNoHunger
+version: 1.0
+description: This plugin cancel damage and hunger if player has the permission !
+api-version: 1.18
+author: itasli
+website: spigotmc.org
 permissions:
-  NoHealthHunger.nohealth:
+  NoDamageNoHunger.nodamage:
     description: Take no damage
     default: op
-  NoHealthHunger.nohunger:
+  NoDamageNoHunger.nohunger:
     description: Never go hungry
     default: op
-  NoHealthHunger.escapevoid:
-    description: Teleport to spawn on entering the void
-    default: true

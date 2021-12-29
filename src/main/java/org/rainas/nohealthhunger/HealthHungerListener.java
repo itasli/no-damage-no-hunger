@@ -1,4 +1,4 @@
-package org.rainas.nohealthhunger;
+package io.github.itasli.nodamagenohunger;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -8,9 +8,9 @@ import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
 public class HealthHungerListener implements Listener {
-	NoHealthHunger plugin;
+	NoDamageNoHunger plugin;
 
-	public HealthHungerListener(NoHealthHunger plugin) {
+	public HealthHungerListener(NoDamageNoHunger plugin) {
 		this.plugin = plugin;
 	}
 
@@ -18,15 +18,8 @@ public class HealthHungerListener implements Listener {
 	public void onEntityDamage(EntityDamageEvent event) {
 		if (event.getEntity() instanceof Player) {
 			Player player = (Player) event.getEntity();
-			if (player.hasPermission("NoHealthHunger.nohealth")) {	
+			if (player.hasPermission("NoDamageNoHunger.nohealth")) {	
 				event.setCancelled(true);
-			}
-			
-			if (event.getCause() == DamageCause.VOID) {
-				if (plugin.doVoid && player.hasPermission("NoHealthHunger.escapevoid")) {
-					player.teleport(plugin.spawn);
-					player.sendMessage(plugin.voidMessage);
-				}
 			}
 		}
 	}
@@ -35,7 +28,7 @@ public class HealthHungerListener implements Listener {
 	public void onFoodLevelChange(FoodLevelChangeEvent event) {
 		if (event.getEntity() instanceof Player) {
 			Player player = (Player) event.getEntity();
-			if (player.hasPermission("NoHealthHunger.nohunger")) {
+			if (player.hasPermission("NoDamageNoHunger.nohunger")) {
 				event.setCancelled(true);
 			}
 		}
