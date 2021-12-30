@@ -1,6 +1,6 @@
 main: io.github.itasli.nodamagenohunger.NoDamageNoHunger
 name: NoDamageNoHunger
-version: 1.0
+version: 1.1
 description: This plugin cancel damage and hunger if player has the permission !
 api-version: 1.18
 author: itasli

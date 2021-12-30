@@ -18,7 +18,7 @@ public class HealthHungerListener implements Listener {
 	public void onEntityDamage(EntityDamageEvent event) {
 		if (event.getEntity() instanceof Player) {
 			Player player = (Player) event.getEntity();
-			if (player.hasPermission("NoDamageNoHunger.nohealth")) {	
+			if (player.hasPermission("NoDamageNoHunger.nodamage")) {	
 				event.setCancelled(true);
 			}
 		}
